@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "982945645571",
+    "firebase_url": "https://applicationone-1bbdc-default-rtdb.firebaseio.com",
+    "project_id": "applicationone-1bbdc",
+    "storage_bucket": "applicationone-1bbdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982945645571:android:eef86ac7018464ce7c7a36",
+        "android_client_info": {
+          "package_name": "com.mini11.applicationone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982945645571-vc5bj82vj7gtho4est50r83sad5r3vp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxfdCQmNN5KUiR9jzuu5PSRgXb6zh5ZUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982945645571-vc5bj82vj7gtho4est50r83sad5r3vp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982945645571:android:f2f73bf3399134f87c7a36",
+        "android_client_info": {
+          "package_name": "com.nuturaldot.animewallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982945645571-vc5bj82vj7gtho4est50r83sad5r3vp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxfdCQmNN5KUiR9jzuu5PSRgXb6zh5ZUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982945645571-vc5bj82vj7gtho4est50r83sad5r3vp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
