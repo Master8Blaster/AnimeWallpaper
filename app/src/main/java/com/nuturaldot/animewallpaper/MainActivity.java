@@ -67,21 +67,22 @@ public class MainActivity extends AppCompatActivity {
                 loadBanner();
             }
         });
-        SplashActivity.appOpenAd.show(MainActivity.this);
-        Log.e("splash", "onAdLoaded.");
-        SplashActivity.appOpenAd.setFullScreenContentCallback(new FullScreenContentCallback() {
-            @Override
-            public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
-                super.onAdFailedToShowFullScreenContent(adError);
-                Log.e("onAdFailedToShow", adError.getMessage());
-            }
+        if(SplashActivity.appOpenAd != null) {
+            SplashActivity.appOpenAd.show(MainActivity.this);
+            Log.e("splash", "onAdLoaded.");
+            SplashActivity.appOpenAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                @Override
+                public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                    super.onAdFailedToShowFullScreenContent(adError);
+                    Log.e("onAdFailedToShow", adError.getMessage());
+                }
 
-            @Override
-            public void onAdDismissedFullScreenContent() {
-                super.onAdDismissedFullScreenContent();
-            }
-        });
-
+                @Override
+                public void onAdDismissedFullScreenContent() {
+                    super.onAdDismissedFullScreenContent();
+                }
+            });
+        }
 
         viewPager2 = findViewById(R.id.cat_viewpager);
         drawerLayout = findViewById(R.id.drawer_layout);

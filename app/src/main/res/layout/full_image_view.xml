@@ -9,6 +9,7 @@
         android:id="@+id/full_imageview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:src="@drawable/loder"
         android:scaleType="centerCrop"/>
 
 </LinearLayout>

@@ -49,6 +49,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
         Glide.with(context)
                 .load(list.get(position).getUrl())
+                .placeholder(R.drawable.loder)
                 .into(imageView);
 
         Objects.requireNonNull(container).addView(view);

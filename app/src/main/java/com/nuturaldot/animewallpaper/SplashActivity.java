@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdError;
@@ -52,6 +53,7 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_FullView);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
@@ -218,7 +220,7 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
             }
-        },3000);
+        },1000);
 
     }
     private boolean isNetworkConnected() {

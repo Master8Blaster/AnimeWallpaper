@@ -2,9 +2,12 @@ package com.nuturaldot.animewallpaper;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+
 import android.app.DownloadManager;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.DisplayMetrics;
@@ -86,24 +89,33 @@ public class ImageViewActivity extends AppCompatActivity {
                 downloadWallpaper();
             }
         });
+
+
     }
 
-    void downloadWallpaper() {
-        File file = new File(Environment.getExternalStorageDirectory() + "/Download/BlackWallpaper");
-        if (!file.exists()) {
-            file.mkdirs();
-            Toast.makeText(ImageViewActivity.this, "" + file.exists(), Toast.LENGTH_SHORT).show();
 
+    void downloadWallpaper() {
+        try {
+            File file = new File(Environment.getExternalStorageDirectory() + "/Download/" + getResources().getString(R.string.app_name));
+            if (!file.exists()) {
+                file.mkdirs();
+                Toast.makeText(ImageViewActivity.this, "" + file.exists(), Toast.LENGTH_SHORT).show();
+
+            }
+            file = new File(file + "/" + getResources().getString(R.string.app_name) + "_" + Utils.list.get(position).getKey() + ".png");
+            DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            Uri uri = Uri.parse(Utils.list.get(position).getUrl());//Uri.fromFile(file);
+            DownloadManager.Request request = new DownloadManager.Request(uri);
+            request.setTitle(getResources().getString(R.string.app_name) + "_" + Utils.list.get(position).getKey());
+            request.setDescription("Downloading");
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, getResources().getString(R.string.app_name) + "/" + file.getName());
+            downloadmanager.enqueue(request);
+
+            Toast.makeText(this, "Downloaded started successfully", Toast.LENGTH_SHORT).show();
+        } catch (Exception c) {
+            Toast.makeText(this, "Something went wrong!", Toast.LENGTH_SHORT).show();
         }
-        file = new File(file + "/BlackWallpaper_" + Utils.list.get(position).getKey() + ".png");
-        DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-        Uri uri = Uri.parse(Utils.list.get(position).getUrl());//Uri.fromFile(file);
-        DownloadManager.Request request = new DownloadManager.Request(uri);
-        request.setTitle("BlackWallpaper_ " + Utils.list.get(position).getKey());
-        request.setDescription("Downloading");
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "BlackWallpaper/" + file.getName());
-        downloadmanager.enqueue(request);
 
     }
 

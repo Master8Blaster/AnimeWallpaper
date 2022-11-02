@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/drawable/ripple_effect.xml" value="0.1155" />
         <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/layout/activity_image.xml" value="0.2" />
         <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/layout/activity_image_view.xml" value="0.2" />
         <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/layout/activity_splash.xml" value="0.22864583333333333" />
+        <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/layout/full_image_view.xml" value="0.22864583333333333" />
+        <entry key="..\:/darshan/project/AnimeWallpaper/app/src/main/res/layout/image_list_design.xml" value="0.22864583333333333" />
       </map>
     </option>
   </component>

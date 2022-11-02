@@ -38,6 +38,7 @@ public class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.Myvi
         Glide
                 .with(activity)
                 .load(list.get(position).getUrl())
+                .placeholder(R.drawable.loder)
                 .centerCrop()
                 .into(holder.image_list);
 
